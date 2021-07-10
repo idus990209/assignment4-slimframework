@@ -181,7 +181,6 @@ $name = $_POST["name"];
         $db = $db->connect();
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':name', $name);
-        header("Location: ../Question1Slim.html");
         $stmt->execute();
         $count = $stmt->rowCount();
         $db = null;
@@ -199,7 +198,6 @@ $name = $_POST["name"];
     }
         
 
-    header("Location: Question1Slim.html");
     //return the status insert berjaya/tidak, as a response
     // $response->getBody()->write("this operation will insert user ti database table");
     // return $response;
